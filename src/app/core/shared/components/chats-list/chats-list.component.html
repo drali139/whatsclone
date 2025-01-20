@@ -1,0 +1,45 @@
+<ion-list>
+  @if (chatService.hasNoChats()) {
+    <div class="empty-state">
+      @if (chatService.isSearching()) {
+        <p>No results found</p>
+        <p class="subtitle">Try searching with different keywords</p>
+      } @else {
+        @switch (getCurrentSegment()) {
+          @case ('unread') {
+            <p>No Unread Chats</p>
+            <ion-button fill="clear" (click)="setSegment('all')">
+              View All Chats
+            </ion-button>
+          }
+          @case ('favorites') {
+            <p>No Favorite Chats</p>
+            <p class="subtitle">Add chats to favorites for quick access</p>
+          }
+          @case ('groups') {
+            <p>No Groups</p>
+            <p class="subtitle">Create or join a group to get started</p>
+          }
+        }
+      }
+    </div>
+  } @else {
+    @for (chat of chatService.chats(); track chat.id) {
+      <ion-item [routerLink]="['/chat', chat.id]" detail="false">
+        <ion-avatar slot="start">
+          <img [src]="chat.avatar" [alt]="chat.name">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ chat.name }}</h2>
+          <p>{{ chat.lastMessage }}</p>
+        </ion-label>
+        <div slot="end" class="chat-meta">
+          <span class="time">{{ chat.time | date:'shortTime' }}</span>
+          @if (chat.unread) {
+            <ion-badge>{{ chat.unread }}</ion-badge>
+          }
+        </div>
+      </ion-item>
+    }
+  }
+</ion-list>

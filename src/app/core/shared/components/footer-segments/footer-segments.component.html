@@ -1,0 +1,39 @@
+<ion-footer>
+  <ion-segment [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)" mode="md">
+    <ion-segment-button value="chats" class="footer-segment">
+      <div class="segment-content">
+        <div class="icon-container">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </div>
+        <ion-label>Chats</ion-label>
+      </div>
+    </ion-segment-button>
+
+    <ion-segment-button value="updates" class="footer-segment">
+      <div class="segment-content">
+        <div class="icon-container">
+          <ion-icon name="camera-outline"></ion-icon>
+        </div>
+        <ion-label>Updates</ion-label>
+      </div>
+    </ion-segment-button>
+
+    <ion-segment-button value="communities" class="footer-segment">
+      <div class="segment-content">
+        <div class="icon-container">
+          <ion-icon name="people-outline"></ion-icon>
+        </div>
+        <ion-label>Communities</ion-label>
+      </div>
+    </ion-segment-button>
+
+    <ion-segment-button value="calls" class="footer-segment">
+      <div class="segment-content">
+        <div class="icon-container">
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
+        <ion-label>Calls</ion-label>
+      </div>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>

@@ -1,0 +1,15 @@
+.custom-searchbar {
+  padding: 8px;
+  --background: rgba(211, 211, 211, 0.233);
+  --box-shadow: none;
+  --border-radius: 20px;
+  --placeholder-color: black;
+  --icon-color: black;
+  
+  ::ng-deep {
+    .searchbar-input {
+      box-shadow: none !important;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<ion-segment [value]="selectedSegment()" (ionChange)="updateSelectedSegment($event)" mode="md">
+  <ion-segment-button value="all">
+    <ion-label>All</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="unread">
+    <ion-label>Unread</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="favorites">
+    <ion-label>Favorites</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="groups">
+    <ion-label>Groups</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="more">
+    <ion-label>+</ion-label>
+  </ion-segment-button>
+</ion-segment>

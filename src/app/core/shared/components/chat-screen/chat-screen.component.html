@@ -1,0 +1,71 @@
+<ion-header class="custom-header">
+  <ion-toolbar>
+    <div class="header-content">
+      <div class="left-section">
+        <ion-back-button defaultHref="/chats"></ion-back-button>
+        <ion-avatar class="chat-avatar">
+          <img [src]="currentChat()?.avatar" alt="avatar">
+        </ion-avatar>
+        <div class="user-info">
+          <h2 class="name">{{ currentChat()?.name ?? '' | textEllipsis:40 }}</h2>
+          <p class="last-seen">{{ lastSeen }}</p>
+        </div>
+      </div>
+      <div class="right-section">
+        <ion-button fill="clear">
+          <ion-icon name="videocam-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat-content">
+  <div class="messages-container">
+    @for (message of messages(); track message.id) {
+      <div class="message-wrapper" [class.sent]="message.sent" [class.received]="!message.sent">
+        <div class="message">
+          <p class="message-text">{{ message.text }}</p>
+          <div class="message-meta">
+            <span class="time">{{ message.timestamp | date:'shortTime' }}</span>
+            @if (message.sent) {
+              <span class="status" [class.seen]="message.status === 'seen'">
+                {{ getMessageStatus(message.status) }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</ion-content>
+
+<ion-footer class="custom-footer">
+  <form [formGroup]="messageForm" class="footer-container" (ngSubmit)="sendMessage()">
+    <div class="input-wrapper">
+      <ion-icon name="happy-outline" class="emoji-icon"></ion-icon>
+      <ion-input
+        class="message-input"
+        placeholder="Message"
+        formControlName="messageText"
+      ></ion-input>
+      <div class="input-actions">
+        <ion-icon name="attach"></ion-icon>
+        <ion-icon name="camera-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="action-button" (click)="sendMessage()">
+      @if (!messageForm.get('messageText')?.value) {
+        <ion-icon name="mic"></ion-icon>
+      } @else {
+        <ion-icon name="send"></ion-icon>
+      }
+    </div>
+  </form>
+</ion-footer>

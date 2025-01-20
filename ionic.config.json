@@ -1,0 +1,7 @@
+{
+  "name": "Guard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

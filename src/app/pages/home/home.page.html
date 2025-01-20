@@ -1,0 +1,17 @@
+<app-header/>
+<ion-content>
+  <app-search-bar/>
+  @if (viewService.getCurrentView() === 'chats') {
+    <app-segments (segmentChanged)="handleSegmentChange($event)"></app-segments>
+    <app-chats-list [activeSegment]="currentSegment()"></app-chats-list>
+  } @else {
+    <div class="empty-state">
+      <p class="title">{{ viewService.getEmptyStateMessage().title }}</p>
+      @if (viewService.getEmptyStateMessage().subtitle) {
+        <p class="subtitle">{{ viewService.getEmptyStateMessage().subtitle }}</p>
+      }
+    </div>
+  }
+</ion-content>
+<app-fab/>
+<app-footer-segments/>

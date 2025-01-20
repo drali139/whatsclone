@@ -1,0 +1,121 @@
+{
+    "chats": [
+        {
+            "id": 1,
+            "name": "Abdullah Farid",
+            "lastMessage": "Kha py ho?",
+            "time": "2024-01-16T10:30:00Z",
+            "unread": 2,
+            "avatar": "/assets/imgs/abdullah1.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": [
+                {
+                    "id": 1,
+                    "text": "Assalam O Alaikum",
+                    "timestamp": "2024-12-11T10:50:00Z",
+                    "sent": false,
+                    "status": "seen"
+                },
+                {
+                    "id": 2,
+                    "text": "kesy ho bro?",
+                    "timestamp": "2024-12-11T10:50:00Z",
+                    "sent": false,
+                    "status": "seen"
+                },
+                {
+                    "id": 3,
+                    "text": "W Salam",
+                    "timestamp": "2024-12-12T19:28:00Z",
+                    "sent": true,
+                    "status": "seen"
+                },
+                {
+                    "id": 4,
+                    "text": "ma bilkul thk ap kesy ho?",
+                    "timestamp": "2024-12-12T19:29:00Z",
+                    "sent": true,
+                    "status": "seen"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Family Group",
+            "lastMessage": "Mom: Jaldi Ghr Pohncho",
+            "time": "2024-01-16T10:00:00Z",
+            "unread": 5,
+            "avatar": "/assets/imgs/download.jpg",
+            "isGroup": false,
+            "isFavorite": true,
+            "messages": []
+        },
+        {
+            "id": 3,
+            "name": "Husnain Kashmiri",
+            "lastMessage": "Kal milty hen InShaAllah",
+            "time": "2024-01-16T09:45:00Z",
+            "unread": 0,
+            "avatar": "/assets/imgs/kash.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": []
+        },
+        {
+            "id": 4,
+            "name": "Hamza L2E",
+            "lastMessage": "Kidhr ho bro?",
+            "time": "2024-01-16T09:30:00Z",
+            "unread": 1,
+            "avatar": "/assets/imgs/abdullah.jpg",
+            "isGroup": false,
+            "isFavorite": true,
+            "messages": []
+        },
+        {
+            "id": 5,
+            "name": "H Asif L2E",
+            "lastMessage": "Ali sir ma ny kaam kr lia hy",
+            "time": "2024-01-16T09:15:00Z",
+            "unread": 0,
+            "avatar": "/assets/imgs/asif.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": []
+        },
+        {
+            "id": 6,
+            "name": "Khurram L2E",
+            "lastMessage": "jani kase ho",
+            "time": "2024-01-16T09:00:00Z",
+            "unread": 1,
+            "avatar": "/assets/imgs/khurram.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": []
+        },
+        {
+            "id": 7,
+            "name": "Ahsan ch L2E",
+            "lastMessage": "Ali bhai 1 error a rha",
+            "time": "2024-01-16T08:45:00Z",
+            "unread": 0,
+            "avatar": "/assets/imgs/ahsan.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": []
+        },
+        {
+            "id": 8,
+            "name": "GM L2E",
+            "lastMessage": "Assalan o Alaikum",
+            "time": "2024-01-16T08:30:00Z",
+            "unread": 1,
+            "avatar": "/assets/imgs/abdullah.jpg",
+            "isGroup": false,
+            "isFavorite": false,
+            "messages": []
+        }
+    ]
+}

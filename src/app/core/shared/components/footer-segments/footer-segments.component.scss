@@ -1,0 +1,109 @@
+ion-footer {
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  position: relative;
+
+  ion-segment {
+    --background: transparent;
+    padding: 8px 0;
+  }
+}
+
+.footer-segment {
+  --background: transparent;
+  --background-checked: transparent;
+  --indicator-color: transparent;
+  --color: #666;
+  --color-checked: #666;
+  min-height: 60px;
+  font-weight: normal;
+  --ripple-color: transparent !important;
+  
+  &::part(indicator) {
+    display: none;
+  }
+
+  &.segment-button-checked {
+    .icon-container {
+      background-color: #e6f7ef;
+      
+      ion-icon {
+        color: #008069;
+      }
+    }
+  }
+}
+
+.segment-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  ion-label {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+
+  ion-icon {
+    font-size: 24px;
+    transition: color 0.2s ease;
+  }
+}
+
+.empty-state {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 1;
+  background: #fff;
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ion-color-medium);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    color: var(--ion-color-medium-shade);
+  }
+}
+
+// Override iOS styles
+:host-context(.ios) {
+  ion-segment {
+    --background: transparent;
+  }
+  
+  .footer-segment {
+    --background: transparent;
+    --background-checked: transparent;
+  }
+}
+
+:host-context(.md) {
+  ion-segment {
+    --background: transparent;
+  }
+  
+  .footer-segment {
+    --background: transparent;
+    --background-checked: transparent;
+  }
+}
