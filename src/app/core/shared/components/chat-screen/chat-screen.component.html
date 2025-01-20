@@ -7,20 +7,21 @@
           <img [src]="currentChat()?.avatar" alt="avatar">
         </ion-avatar>
         <div class="user-info">
-          <h2 class="name">{{ currentChat()?.name ?? '' | textEllipsis:40 }}</h2>
-          <p class="last-seen">{{ lastSeen }}</p>
+          <h3 class="name">{{ currentChat()?.name ?? '' | textEllipsis:70 }}</h3>
+          <p class="last-seen">{{ isOnline() ? 'online' : lastSeen }}</p>
         </div>
+
       </div>
       <div class="right-section">
-        <ion-button fill="clear">
-          <ion-icon name="videocam-outline"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon name="call-outline"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear">
-          <ion-icon name="ellipsis-vertical"></ion-icon>
-        </ion-button>
+        <ion-list>
+          <ion-icon class="icon" name="videocam-outline"></ion-icon>
+        </ion-list>
+        <ion-list>
+          <ion-icon class="icon" name="call-outline"></ion-icon>
+        </ion-list>
+        <ion-list>
+          <ion-icon class="icon" name="ellipsis-vertical"></ion-icon>
+        </ion-list>
       </div>
     </div>
   </ion-toolbar>

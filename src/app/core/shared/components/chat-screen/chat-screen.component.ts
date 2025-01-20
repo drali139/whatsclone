@@ -4,8 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { 
   IonHeader, IonToolbar, IonBackButton, IonTitle, 
   IonContent, IonFooter, IonButton, IonIcon, IonAvatar,
-  IonInput
-} from '@ionic/angular/standalone';
+  IonInput, IonList } from '@ionic/angular/standalone';
 import { ChatService } from 'src/app/core/services/chat.service';
 import { CommonModule } from '@angular/common';
 import { Chat, Message } from '../../../interfaces/chat.interface';
@@ -13,10 +12,11 @@ import { TextEllipsisPipe } from 'src/app/core/pipes/text-ellipsis.pipe';
 @Component({
   selector: 'app-chat-screen',
   standalone: true,
-  imports: [
+  imports: [IonList, 
     CommonModule,
     ReactiveFormsModule,
     IonHeader,
+    IonList,
     IonToolbar,
     IonBackButton,
     IonTitle,
