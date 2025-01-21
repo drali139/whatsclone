@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonFooter, IonSegment, IonSegmentButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
@@ -20,10 +20,16 @@ import { ViewService, ViewType } from 'src/app/core/services/view.service';
   ]
 })
 export class FooterSegmentsComponent {
-  private viewService = inject(ViewService);
-  selectedSegment = computed(() => this.viewService.getCurrentView());
+  public viewService: ViewService = inject(ViewService);
+  public selectedSegment: WritableSignal<ViewType> = signal<ViewType>('chats');
 
-  segmentChanged(event: any) {
-    this.viewService.setCurrentView(event.detail.value as ViewType);
+  constructor() {
+    this.selectedSegment.set(this.viewService.getCurrentView());
+  }
+
+  public handleSegmentChange(event: any): void {
+    const newValue = event.detail.value as ViewType;
+    this.selectedSegment.set(newValue);
+    this.viewService.setCurrentView(newValue);
   }
 }

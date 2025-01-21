@@ -1,5 +1,5 @@
 <ion-footer>
-  <ion-segment [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)" mode="md">
+  <ion-segment [value]="selectedSegment()" (ionChange)="handleSegmentChange($event)" mode="md">
     <ion-segment-button value="chats" class="footer-segment">
       <div class="segment-content">
         <div class="icon-container">

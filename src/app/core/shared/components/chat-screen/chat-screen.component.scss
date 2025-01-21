@@ -141,12 +141,12 @@
             
             .status {
               font-size: 14px;
-              color: #34B7F1;
-              letter-spacing: -3px;
+              color: #808080;
+              letter-spacing: -7px;
               // font-weight: bold;
               
               &.seen {
-                color: #53bdeb;
+                color: #34B7F1;
               }
             }
           }
@@ -231,6 +231,8 @@
         --padding-end: 0;
         --background: transparent;
         flex: 1;
+        --highlight-color: transparent;
+        
         
         &::part(native) {
           padding: 0;

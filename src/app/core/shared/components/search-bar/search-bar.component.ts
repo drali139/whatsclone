@@ -13,7 +13,7 @@ import { ChatService } from 'src/app/core/services/chat.service';
 })
 export class SearchBarComponent implements OnInit {
   searchControl = new FormControl('');
-  private chatService = inject(ChatService);
+  private chatService:ChatService = inject(ChatService);
 
   ngOnInit() {
     this.searchControl.valueChanges.pipe(
