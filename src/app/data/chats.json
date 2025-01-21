@@ -47,7 +47,7 @@
             "time": "2024-01-16T10:00:00Z",
             "unread": 5,
             "avatar": "/assets/imgs/download.jpg",
-            "isGroup": false,
+            "isGroup": true,
             "isFavorite": true,
             "messages": []
         },
